@@ -8,8 +8,7 @@ pipeline{
         }
         stage("This is to install the Apache2 from Ansible"){
             steps{
-                sshagent(['ec2login']) {
-                    sh 'scp apache2.yml /home/ubuntu' 
+                sshagent(['ec2login']) {                                     
                     sh 'ansible-playbook apache2.yml'                   
                 }
             }            
