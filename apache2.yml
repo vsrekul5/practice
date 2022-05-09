@@ -10,9 +10,9 @@
     copy: 
       src: /home/ubuntu/index.html 
       dest: /var/www/html 
-      owner: apache 
-      group: apache 
-      mode: 0644
+      #owner: apache 
+      #group: apache 
+      #mode: 0644
 
   handlers:
   - name: restart Apache
