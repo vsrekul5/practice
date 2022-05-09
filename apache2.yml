@@ -1,0 +1,12 @@
+---
+- host : all
+  become: true
+  become-method: sudo
+  tasks:
+  - name: "install apache2"
+    apt: name=apache2 state=latest
+    notify: restart Apache
+
+  handlers:
+  - name: restart Apache
+    service: name=apache2 state=restared
