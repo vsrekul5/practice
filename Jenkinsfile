@@ -9,8 +9,8 @@ pipeline{
         stage("This is to install the Apache2 from Ansible"){
             steps{
               sh 'docker build -t jenkinsproj1 .'
-                }
-            }            
+            }
+                        
         }
     }
 }
